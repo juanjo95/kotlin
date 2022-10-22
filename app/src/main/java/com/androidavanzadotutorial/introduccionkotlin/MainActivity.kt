@@ -30,7 +30,45 @@ class MainActivity : AppCompatActivity() {
 
         println(saludo)
 
+        //Esto es un comentario
+        /*
+        * Esto es otro tipo de comentario
+        * */
 
+        /*
+        *  Operadores de calculo
+        */
+        val a:Int = 5 + 5 //10
+        val b:Int = 10 - 2 //8
+        val c:Int = 3 * 4 //12
+        val d:Int = 10 / 5 //2
+        val e:Int = 10 % 3 //1
+        val f:Int = 10 / 6 //1
+
+        var aPreIncremento = 5
+        var bPreDecremento = 5
+        var cPostIncremento = 5
+        var dPostDecremento = 5
+
+        println(aPreIncremento)
+        println(++aPreIncremento) //Incrementa primero, luego da salida 6
+        println(aPreIncremento)
+
+        println(bPreDecremento)
+        println(--bPreDecremento) //Primero decrementar, luego da salida 4
+        println(bPreDecremento)
+
+        println(cPostIncremento)
+        println(cPostIncremento++) //Primero muestra, luego incrementa salida 5
+        println(cPostIncremento)
+
+        println(dPostDecremento)
+        println(dPostDecremento--) //Primero muestra, luego decrementa salida 5
+        println(dPostDecremento)
+
+        saldo += sueldo
+
+        saldo++
 
     }
 }
