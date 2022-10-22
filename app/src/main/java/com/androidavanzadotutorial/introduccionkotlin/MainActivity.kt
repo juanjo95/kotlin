@@ -70,5 +70,18 @@ class MainActivity : AppCompatActivity() {
 
         saldo++
 
+        /*
+        *   Operadores de comparacion
+        */
+
+        a == b
+        a != b
+        a > b
+        a < b
+        a >= b
+        a <= b
+
+
+
     }
 }
