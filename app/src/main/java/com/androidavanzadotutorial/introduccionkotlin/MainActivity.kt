@@ -37,6 +37,19 @@ class MainActivity : AppCompatActivity() {
             saludo += ", quieres ser VIP? paga la cuota"
         }
 
+        /**
+         * Condicional When (switch)
+         */
+        var mes = fecha.subSequence(3,5).toString().toInt()
+        when(mes){
+            1 -> print("\n En enero hay la super oferta del 7%")
+            2, 3 -> print("\n En invierno no hay ofertas de inversiones")
+            4, 5, 6 -> print("\n En primavera hay ofertas de inversiones con el 1.5% de interes")
+            7, 8, 9 -> print("\n En verano hay ofertas de inversiones con el 2.5% de interes")
+            10, 11, 12 -> print("\n En otoño hay ofertas de inversiones con el 3.5% de interes")
+            else -> print("\n La fecha es erronea")
+        }
+
         println(saludo)
 
         //Esto es un comentario
