@@ -26,7 +26,16 @@ class MainActivity : AppCompatActivity() {
         //VARIABLE QUE PUEDE CAMBIAR
         var nombre:String = "Juan Jose"
         var vip:Boolean = false
-        var saludo:String = "Hola " + saldo.toString()
+        var saludo:String = "Hola " + nombre
+
+        /**
+         * Condicional If -else
+         */
+        if(vip == true){
+            saludo += ", te queremos mucho"
+        }else{
+            saludo += ", quieres ser VIP? paga la cuota"
+        }
 
         println(saludo)
 
