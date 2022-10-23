@@ -50,6 +50,21 @@ class MainActivity : AppCompatActivity() {
             else -> print("\n La fecha es erronea")
         }
 
+        /**
+         * Operadores logicos && = AND, || = OR, ! = NEGACION
+         */
+        var aa:Boolean = true
+        var bb:Boolean = true
+        var cc:Boolean = false
+        var dd:Boolean = false
+
+        aa && bb // Las 2 se deben cumplir
+        aa || bb // Alguna de las 2 se debe cumplir
+        aa && cc
+        aa && dd
+        !dd // Invierte el valor que tiene si es true lo pone falso y viceversa
+
+
         println(saludo)
 
         //Esto es un comentario
