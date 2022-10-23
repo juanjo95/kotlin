@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         //VALOR QUE NO VA A CAMBIAR
-        val fecha = "26/12/1995"
+        val fecha = "01/05/1990"
 
         //VARIABLE QUE PUEDE CAMBIAR
         var nombre:String = "Juan Jose"
@@ -40,6 +40,9 @@ class MainActivity : AppCompatActivity() {
         /**
          * Condicional When (switch)
          */
+        var dia = fecha.subSequence(0,2).toString().toInt()
+        if(dia == 1) ingresar_sueldo()
+
         var mes = fecha.subSequence(3,5).toString().toInt()
         when(mes){
             1 -> print("\n En enero hay la super oferta del 7%")
@@ -77,6 +80,11 @@ class MainActivity : AppCompatActivity() {
             intentos++
         }while (intentos < 3 && clave_ingresada != pin)
         if(intentos == 3) println("Tarjeta bloqueada")
+
+        /**
+         * Funciones
+         */
+        mostrar_saldo()
 
         println(saludo)
 
@@ -134,4 +142,18 @@ class MainActivity : AppCompatActivity() {
 
 
     }
+
+    /**
+     * Funciones sencillas
+     */
+    fun mostrar_saldo(){
+        println("Tienes $saldo $MONEDA")
+    }
+
+    fun ingresar_sueldo(){
+        saldo+= sueldo
+        println("Se ha ingresado tu sueldo de $sueldo $MONEDA")
+        mostrar_saldo()
+    }
+
 }
