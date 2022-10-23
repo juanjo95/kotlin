@@ -28,6 +28,10 @@ class MainActivity : AppCompatActivity() {
         var vip:Boolean = false
         var saludo:String = "Hola " + nombre
 
+        mostrar_saldo()
+        ingresar_sueldo(50.5f)
+        retirar_sueldo(40f)
+
         /**
          * Condicional If -else
          */
@@ -153,6 +157,21 @@ class MainActivity : AppCompatActivity() {
     fun ingresar_sueldo(){
         saldo+= sueldo
         println("Se ha ingresado tu sueldo de $sueldo $MONEDA")
+        mostrar_saldo()
+    }
+
+    /**
+     * Funciones con parametros
+     */
+    fun ingresar_sueldo(cantidad:Float){
+        saldo+= cantidad
+        println("Se ha ingresado $cantidad $MONEDA")
+        mostrar_saldo()
+    }
+
+    fun retirar_sueldo(cantidad:Float){
+        saldo-= cantidad
+        println("Se ha retirado $cantidad $MONEDA")
         mostrar_saldo()
     }
 
