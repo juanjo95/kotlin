@@ -31,6 +31,8 @@ class MainActivity : AppCompatActivity() {
         mostrar_saldo()
         ingresar_sueldo(50.5f)
         retirar_sueldo(40f)
+        retirar_sueldo(50f)
+        retirar_sueldo(2000f)
 
         /**
          * Condicional If -else
@@ -170,9 +172,21 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun retirar_sueldo(cantidad:Float){
-        saldo-= cantidad
-        println("Se ha retirado $cantidad $MONEDA")
-        mostrar_saldo()
+        if(verificarCantidad(cantidad)){
+            saldo-= cantidad
+            println("Se ha retirado $cantidad $MONEDA")
+            mostrar_saldo()
+        }else{
+            println("Cantidad superior al saldo disponible")
+        }
+    }
+
+    fun verificarCantidad(cantidad: Float):Boolean{
+        if(cantidad > saldo){
+            return false
+        }else{
+            return true
+        }
     }
 
 }
