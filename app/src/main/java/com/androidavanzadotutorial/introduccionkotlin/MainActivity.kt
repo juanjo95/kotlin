@@ -35,6 +35,11 @@ class MainActivity : AppCompatActivity() {
         retirar_sueldo(2000f)
 
         /**
+         * Arrays
+         */
+        var recibos:Array<String> = arrayOf("Luz","Agua","Gas")
+
+        /**
          * Condicional If -else
          */
         if(vip == true){
