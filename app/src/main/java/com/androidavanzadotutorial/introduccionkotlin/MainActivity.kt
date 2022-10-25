@@ -82,6 +82,36 @@ class MainActivity : AppCompatActivity() {
         println("Numero de clientes: ${clientes.size}")
 
         /**
+         * Colecciones List y MutableList
+         */
+        var divisas:List<String> = listOf("USD","EUR","YEN")
+        println(divisas)
+
+        var bolsa:MutableList<String> = mutableListOf("Coca-cola","Adidas","Amazon","Pfizer")
+        println(bolsa)
+
+        bolsa.add("Adobe")
+        println(bolsa)
+
+        bolsa.add("Nvidia")
+        println(bolsa)
+
+        bolsa.removeAt(2)
+        println(bolsa)
+
+        println(bolsa.first())
+        println(bolsa.last())
+        println(bolsa.elementAt(2))
+        println(bolsa.none())
+
+        println(bolsa.firstOrNull())
+        bolsa.clear()
+        println(bolsa)
+
+        println(bolsa.none())
+        println(bolsa.firstOrNull())
+
+        /**
          * Condicional If -else
          */
         if(vip == true){
