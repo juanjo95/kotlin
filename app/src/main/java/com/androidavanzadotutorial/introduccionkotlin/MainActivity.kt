@@ -55,6 +55,17 @@ class MainActivity : AppCompatActivity() {
         )
         recorrer_matriz(matriz)
 
+        /**
+         * Colecciones Set - Inmutable
+         */
+        var clientesVip: Set<Int> = setOf(1234,5678,4040)
+        val setMezclado =  setOf(2,4.454,"casa",'c')
+
+        println("Clientes VIP: \n")
+        println(clientesVip)
+        println("Numero de clientes VIP: ${clientesVip.size}")
+
+        if(clientesVip.contains(1234)) println("1234 es VIP")
 
 
         /**
