@@ -38,6 +38,13 @@ class MainActivity : AppCompatActivity() {
          * Arrays
          */
         var recibos:Array<String> = arrayOf("Luz","Agua","Gas")
+        recibos.set(2,"Internet")
+
+        /**
+         * Ciclo For (Recorrer un array)
+         */
+        recorrer_array(recibos)
+
 
         /**
          * Matrices
@@ -201,6 +208,21 @@ class MainActivity : AppCompatActivity() {
         }else{
             return true
         }
+    }
+
+    /**
+     * Ciclo for distintas formas
+     */
+    fun recorrer_array(array:Array<String>){
+
+        //1ra forma del for, recorremos cada elemento.
+        for (i in array) println(i)
+
+        //2da forma, devuelve los indices de todos los elementos (posicion).
+        for (i in array.indices) println(array.get(i))
+
+        //3ra forma, recorrer desde el 0 hasta la longitud -1, tradicional.
+        for (i in 0 .. array.size -1) println("${i+1} : ${array.get(i)}")
     }
 
 }
