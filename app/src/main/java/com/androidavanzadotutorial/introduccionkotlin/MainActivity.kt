@@ -122,6 +122,13 @@ class MainActivity : AppCompatActivity() {
         println(mapa)
 
         /**
+         * Coleccion Mutable Map
+         */
+        var inversiones = mutableMapOf<String,Float>()
+        inversiones.put("coca-cola",50f)
+        println(inversiones)
+
+        /**
          * Condicional If -else
          */
         if(vip == true){
