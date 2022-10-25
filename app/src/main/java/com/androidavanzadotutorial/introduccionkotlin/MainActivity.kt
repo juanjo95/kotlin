@@ -112,6 +112,16 @@ class MainActivity : AppCompatActivity() {
         println(bolsa.firstOrNull())
 
         /**
+         * Colecciones Map
+         */
+        var mapa:Map<Int,String> = mapOf(
+            1 to "espana",
+            2 to "mexico",
+            3 to "colombia"
+        )
+        println(mapa)
+
+        /**
          * Condicional If -else
          */
         if(vip == true){
