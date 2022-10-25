@@ -45,15 +45,17 @@ class MainActivity : AppCompatActivity() {
          */
         recorrer_array(recibos)
 
-
         /**
          * Matrices
          */
-        var matriz = arrayOf(
+        var matriz: Array<IntArray> = arrayOf(
             intArrayOf(1,2,3),
-            intArrayOf(4,5,6),
-            intArrayOf(7,8,9,10,11,12,13)
+            intArrayOf(4,5,6,7,8,9,10),
+            intArrayOf(11,12,13)
         )
+        recorrer_matriz(matriz)
+
+
 
         /**
          * Condicional If -else
@@ -223,6 +225,21 @@ class MainActivity : AppCompatActivity() {
 
         //3ra forma, recorrer desde el 0 hasta la longitud -1, tradicional.
         for (i in 0 .. array.size -1) println("${i+1} : ${array.get(i)}")
+
+        //4ta forma, deciendole hasta donde y sin llegar a el.
+        for (i in (0 until array.size)) println(array.get(i))
+    }
+
+    /**
+     * Ciclo for anidado (matrices)
+     */
+    fun recorrer_matriz(array: Array<IntArray>){
+        for (i in (0 until array.size)){
+            println()
+            for (j in (0 until array[i].size)){
+                println("Posicion[${i}][${j}] : ${array[i][j]}")
+            }
+        }
     }
 
 }
