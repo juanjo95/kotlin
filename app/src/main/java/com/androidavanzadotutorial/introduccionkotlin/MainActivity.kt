@@ -67,6 +67,19 @@ class MainActivity : AppCompatActivity() {
 
         if(clientesVip.contains(1234)) println("1234 es VIP")
 
+        /**
+         * Colecciones Set - Mutable
+         */
+        var clientes:MutableSet<Int> = mutableSetOf(1234,5678,4040,8970)
+        println("Clientes: \n")
+        println(clientes)
+        clientes.add(3026)
+        println(clientes)
+        clientes.remove(5678)
+        println(clientes)
+        clientes.clear()
+        println(clientes)
+        println("Numero de clientes: ${clientes.size}")
 
         /**
          * Condicional If -else
