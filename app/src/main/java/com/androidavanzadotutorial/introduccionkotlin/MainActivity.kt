@@ -130,7 +130,8 @@ class MainActivity : AppCompatActivity() {
         /**
          * Bucle while
          */
-        var empresa:String;
+        //Null Safety = (var empresa:String?) ó (bolsa.elementAtOrNull(index)!!)
+        var empresa:String? = null;
         mostrar_saldo()
         var cantidad_a_invertir:Float = 90f
         var index:Int = 0
@@ -146,6 +147,8 @@ class MainActivity : AppCompatActivity() {
             }
             index++
         }
+
+        mostrar_saldo()
 
         /**
          * Condicional If -else
