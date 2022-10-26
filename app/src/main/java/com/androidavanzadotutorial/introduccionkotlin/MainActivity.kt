@@ -24,9 +24,9 @@ class MainActivity : AppCompatActivity() {
         val fecha = "01/05/1990"
 
         //VARIABLE QUE PUEDE CAMBIAR
-        var nombre:String = "Juan Jose"
-        var vip:Boolean = false
-        var saludo:String = "Hola " + nombre
+        var nombre: String = "Juan Jose"
+        var vip: Boolean = false
+        var saludo: String = "Hola " + nombre
 
         mostrar_saldo()
         ingresar_sueldo(50.5f)
@@ -37,8 +37,8 @@ class MainActivity : AppCompatActivity() {
         /**
          * Arrays
          */
-        var recibos:Array<String> = arrayOf("Luz","Agua","Gas")
-        recibos.set(2,"Internet")
+        var recibos: Array<String> = arrayOf("Luz", "Agua", "Gas")
+        recibos.set(2, "Internet")
 
         /**
          * Ciclo For (Recorrer un array)
@@ -49,28 +49,28 @@ class MainActivity : AppCompatActivity() {
          * Matrices
          */
         var matriz: Array<IntArray> = arrayOf(
-            intArrayOf(1,2,3),
-            intArrayOf(4,5,6,7,8,9,10),
-            intArrayOf(11,12,13)
+            intArrayOf(1, 2, 3),
+            intArrayOf(4, 5, 6, 7, 8, 9, 10),
+            intArrayOf(11, 12, 13)
         )
         recorrer_matriz(matriz)
 
         /**
          * Colecciones Set - Inmutable
          */
-        var clientesVip: Set<Int> = setOf(1234,5678,4040)
-        val setMezclado =  setOf(2,4.454,"casa",'c')
+        var clientesVip: Set<Int> = setOf(1234, 5678, 4040)
+        val setMezclado = setOf(2, 4.454, "casa", 'c')
 
         println("Clientes VIP: \n")
         println(clientesVip)
         println("Numero de clientes VIP: ${clientesVip.size}")
 
-        if(clientesVip.contains(1234)) println("1234 es VIP")
+        if (clientesVip.contains(1234)) println("1234 es VIP")
 
         /**
          * Colecciones Set - Mutable
          */
-        var clientes:MutableSet<Int> = mutableSetOf(1234,5678,4040,8970)
+        var clientes: MutableSet<Int> = mutableSetOf(1234, 5678, 4040, 8970)
         println("Clientes: \n")
         println(clientes)
         clientes.add(3026)
@@ -84,10 +84,10 @@ class MainActivity : AppCompatActivity() {
         /**
          * Colecciones List y MutableList
          */
-        var divisas:List<String> = listOf("USD","EUR","YEN")
+        var divisas: List<String> = listOf("USD", "EUR", "YEN")
         println(divisas)
 
-        var bolsa:MutableList<String> = mutableListOf("Coca-cola","Adidas","Amazon","Pfizer")
+        var bolsa: MutableList<String> = mutableListOf("Coca-cola", "Adidas", "Amazon", "Pfizer")
         println(bolsa)
 
         bolsa.add("Adobe")
@@ -114,7 +114,7 @@ class MainActivity : AppCompatActivity() {
         /**
          * Colecciones Map
          */
-        var mapa:Map<Int,String> = mapOf(
+        var mapa: Map<Int, String> = mapOf(
             1 to "espana",
             2 to "mexico",
             3 to "colombia"
@@ -124,25 +124,25 @@ class MainActivity : AppCompatActivity() {
         /**
          * Coleccion Mutable Map
          */
-        var inversiones = mutableMapOf<String,Float>()
+        var inversiones = mutableMapOf<String, Float>()
         println(inversiones)
 
         /**
          * Bucle while
          */
         //Null Safety = (var empresa:String?) ó (bolsa.elementAtOrNull(index)!!)
-        var empresa:String? = null;
+        var empresa: String? = null;
         mostrar_saldo()
-        var cantidad_a_invertir:Float = 90f
-        var index:Int = 0
+        var cantidad_a_invertir: Float = 90f
+        var index: Int = 0
 
-        while(saldo >= cantidad_a_invertir){
+        while (saldo >= cantidad_a_invertir) {
             empresa = bolsa.elementAtOrNull(index)
-            if(empresa != null){
+            if (empresa != null) {
                 saldo -= cantidad_a_invertir
                 println("Se ha invertido $cantidad_a_invertir $MONEDA en $empresa")
-                inversiones.put(empresa,cantidad_a_invertir)
-            }else{
+                inversiones.put(empresa, cantidad_a_invertir)
+            } else {
                 break
             }
             index++
@@ -153,20 +153,20 @@ class MainActivity : AppCompatActivity() {
         /**
          * Condicional If -else
          */
-        if(vip == true){
+        if (vip == true) {
             saludo += ", te queremos mucho"
-        }else{
+        } else {
             saludo += ", quieres ser VIP? paga la cuota"
         }
 
         /**
          * Condicional When (switch)
          */
-        var dia = fecha.subSequence(0,2).toString().toInt()
-        if(dia == 1) ingresar_sueldo()
+        var dia = fecha.subSequence(0, 2).toString().toInt()
+        if (dia == 1) ingresar_sueldo()
 
-        var mes = fecha.subSequence(3,5).toString().toInt()
-        when(mes){
+        var mes = fecha.subSequence(3, 5).toString().toInt()
+        when (mes) {
             1 -> print("\n En enero hay la super oferta del 7%")
             2, 3 -> print("\n En invierno no hay ofertas de inversiones")
             4, 5, 6 -> print("\n En primavera hay ofertas de inversiones con el 1.5% de interes")
@@ -178,10 +178,10 @@ class MainActivity : AppCompatActivity() {
         /**
          * Operadores logicos && = AND, || = OR, ! = NEGACION
          */
-        var aa:Boolean = true
-        var bb:Boolean = true
-        var cc:Boolean = false
-        var dd:Boolean = false
+        var aa: Boolean = true
+        var bb: Boolean = true
+        var cc: Boolean = false
+        var dd: Boolean = false
 
         aa && bb // Las 2 se deben cumplir
         aa || bb // Alguna de las 2 se debe cumplir
@@ -192,16 +192,16 @@ class MainActivity : AppCompatActivity() {
         /**
          * BUCLE DO-WHILE (SE EJECUTA AL MENOS 1 VEZ)
          */
-        var pin:Int = 1234
-        var intentos:Int = 0
-        var clave_ingresada:Int = 1233
+        var pin: Int = 1234
+        var intentos: Int = 0
+        var clave_ingresada: Int = 1233
         do {
             println("Ingrese el PIN:")
             println("Clave ingresada: ${++clave_ingresada}")
-            if(clave_ingresada == pin) break
+            if (clave_ingresada == pin) break
             intentos++
-        }while (intentos < 3 && clave_ingresada != pin)
-        if(intentos == 3) println("Tarjeta bloqueada")
+        } while (intentos < 3 && clave_ingresada != pin)
+        if (intentos == 3) println("Tarjeta bloqueada")
 
         /**
          * Funciones
@@ -218,12 +218,12 @@ class MainActivity : AppCompatActivity() {
         /*
         *  Operadores de calculo
         */
-        val a:Int = 5 + 5 //10
-        val b:Int = 10 - 2 //8
-        val c:Int = 3 * 4 //12
-        val d:Int = 10 / 5 //2
-        val e:Int = 10 % 3 //1
-        val f:Int = 10 / 6 //1
+        val a: Int = 5 + 5 //10
+        val b: Int = 10 - 2 //8
+        val c: Int = 3 * 4 //12
+        val d: Int = 10 / 5 //2
+        val e: Int = 10 % 3 //1
+        val f: Int = 10 / 6 //1
 
         var aPreIncremento = 5
         var bPreDecremento = 5
@@ -261,8 +261,80 @@ class MainActivity : AppCompatActivity() {
         a >= b
         a <= b
 
+        /**
+         * Ejercicio 1
+         */
+        var numero: Int = 9
+        do {
+            println("Numero: $numero")
+            numero--
+        } while (numero >= 0)
 
+        /**
+         * Ejercicio 2
+         */
+        var num: Int = 1
+        while (num <= 10) {
+            if (num % 2 == 0) {
+                println("Numero par: $num")
+            }
+            num++
+        }
 
+        /**
+         * Ejercicio 3
+         */
+        var platos: Array<String> = arrayOf("pizza", "hamburguesa", "perro", "gaseosa")
+        for (i in 0..(platos.size - 1)) {
+            println("Plato: ${platos.get(i)}")
+        }
+
+        /**
+         * Ejercicio 4
+         */
+        var men: Map<String, Int> = mapOf(
+            "pizza" to 15,
+            "hamburguesa" to 25,
+            "perro" to 17,
+            "gaseosa" to 8
+        )
+
+        var i: Int = 1
+        for ((plato, precio) in men) {
+            println("Plato ${i++}: $plato tiene un precio de $precio")
+        }
+
+        /**
+         * Ejercicio 5
+         */
+        var menu = arrayOf(
+            arrayOf("Pizza", 15f, arrayOf("carne", "queso", "harina", "maicitos")),
+            arrayOf("Hamburguesa", 25f, arrayOf("Pan", "queso", "carne", "salsas", "tocineta")),
+            arrayOf("Perro", 17f, arrayOf("Pan", "Salchicha", "queso")),
+            arrayOf("Gaseosa", 8f, arrayOf("Agua", "Azucar", "Colorante"))
+        )
+
+        println("menu con precios e ingredientes")
+        for (i in (0 until menu.size)) {
+            for (j in (0 until menu[i].size)) {
+                println()
+                when (j) {
+                    0 -> {
+                        print("${i + 1}. ${menu[i][j]}")
+                    }
+                    1 -> {
+                        print(" $${menu[i][j]}")
+                    }
+                    2 -> {
+                        print(" Incredientes : ")
+                        var ingredientes: Array<String> = menu[i][j] as Array<String>
+                        for (i in ingredientes) {
+                            print("$i - ")
+                        }
+                    }
+                }
+            }
+        }
     }
 
     /**
