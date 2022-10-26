@@ -125,8 +125,27 @@ class MainActivity : AppCompatActivity() {
          * Coleccion Mutable Map
          */
         var inversiones = mutableMapOf<String,Float>()
-        inversiones.put("coca-cola",50f)
         println(inversiones)
+
+        /**
+         * Bucle while
+         */
+        var empresa:String;
+        mostrar_saldo()
+        var cantidad_a_invertir:Float = 90f
+        var index:Int = 0
+
+        while(saldo >= cantidad_a_invertir){
+            empresa = bolsa.elementAtOrNull(index)
+            if(empresa != null){
+                saldo -= cantidad_a_invertir
+                println("Se ha invertido $cantidad_a_invertir $MONEDA en $empresa")
+                inversiones.put(empresa,cantidad_a_invertir)
+            }else{
+                break
+            }
+            index++
+        }
 
         /**
          * Condicional If -else
